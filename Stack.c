@@ -50,6 +50,15 @@ int pop (struct stack *ptr){
         return val;
     }
 }
+// peek operation
+int peek (struct stack *ptr, int i){
+  if (ptr-> top - i + 1 <0){
+    printf(" Not a valid position for stack");
+    return -1;}
+    else{
+        return ptr->arr[ptr->top - i + 1];
+    }
+}
 
  int main(){
     // struct stack s;
@@ -63,17 +72,16 @@ int pop (struct stack *ptr){
     sp->arr = (int*)malloc(sp->size * sizeof(int*));
    
 
-//     push(sp,1);
-//     push(sp,2);
-//     push(sp,3);
-//     push(sp,4);
-//     push(sp,5);
-//   printStack(sp);
-//    pop(sp);
-
-   
+    push(sp,1);
+    push(sp,2);
+    push(sp,3);
+    push(sp,4);
+    push(sp,5);
+  printStack(sp);
+   pop(sp);
     printStack(sp);
+
+     printf(" %d",peek(sp,3));
+    
      return 0;
-
-
  }
