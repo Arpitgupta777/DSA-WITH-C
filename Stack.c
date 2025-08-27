@@ -60,6 +60,15 @@ int peek (struct stack *ptr, int i){
     }
 }
 
+// stack top operation
+int stacktop(struct stack *ptr){
+    return ptr->arr[ptr->top];
+}
+
+// Stack bottom operation
+int stackbottom(struct stack *ptr){
+    return ptr->arr[0];
+}
  int main(){
     // struct stack s;
     // s.size =80;
